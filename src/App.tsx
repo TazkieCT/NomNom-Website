@@ -1,34 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Routes, Route, NavLink } from 'react-router-dom'
+import Marketplace from './pages/Marketplace'
+import AboutUs from './pages/AboutUs'
+import FAQ from './pages/FAQ'
+import NotFound from './pages/NotFound'
+import Home from './pages/Dashboard'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="/" end style={({isActive}) => ({fontWeight: isActive ? '700' : '400'})}>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/marketplace" style={({isActive}) => ({fontWeight: isActive ? '700' : '400'})}>
+                Marketplace
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" style={({isActive}) => ({fontWeight: isActive ? '700' : '400'})}>
+                About Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/faq" style={({isActive}) => ({fontWeight: isActive ? '700' : '400'})}>
+                FAQ
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main style={{padding: '1rem'}}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+    </div>
   )
 }
 
