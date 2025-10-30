@@ -4,37 +4,14 @@ import Marketplace from './pages/Marketplace'
 import AboutUs from './pages/AboutUs'
 import FAQ from './pages/FAQ'
 import NotFound from './pages/NotFound'
-import Home from './pages/Dashboard'
+import Home from './pages/Home'
+import Header from './components/header'
+import Footer from './components/footer'
 
 function App() {
   return (
     <div>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <NavLink to="/" end style={({isActive}) => ({fontWeight: isActive ? '700' : '400'})}>
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/marketplace" style={({isActive}) => ({fontWeight: isActive ? '700' : '400'})}>
-                Marketplace
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/about" style={({isActive}) => ({fontWeight: isActive ? '700' : '400'})}>
-                About Us
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/faq" style={({isActive}) => ({fontWeight: isActive ? '700' : '400'})}>
-                FAQ
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
 
       <main style={{padding: '1rem'}}>
         <Routes>
@@ -45,6 +22,8 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+
+      <Footer />
     </div>
   )
 }
