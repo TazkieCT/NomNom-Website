@@ -1,6 +1,7 @@
 "use client"
 
 import { Link } from "react-router-dom"
+import Logo from "./Logo"
 
 export default function Header() {
   return (
@@ -9,9 +10,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold">
-              <span className="text-pink-600">NOM</span>
-              <span className="text-black">NOM</span>
+            <Link to="/" className="flex items-center gap-2">
+              <Logo mode="dark" className="h-10 w-auto" enableRainbow={true} />
             </Link>
           </div>
 
@@ -23,7 +23,7 @@ export default function Header() {
             <Link to="#signin" className="text-gray-700 hover:text-gray-900 transition">
               Sign In
             </Link>
-            <button className="px-6 py-2 border-2 border-pink-600 text-pink-600 rounded-lg hover:bg-pink-50 transition font-medium">
+            <button className="px-6 py-2 border-2 border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition font-medium">
               Sign Up
             </button>
           </nav>

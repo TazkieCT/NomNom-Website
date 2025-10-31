@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Logo from "./Logo"
 
 export default function Footer() {
   const [scrollY, setScrollY] = useState(0)
@@ -35,10 +36,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">
-              <span className="text-pink-500">NOM</span>
-              <span>NOM</span>
-            </h3>
+            <div className="mb-4">
+              <Logo mode="light" className="h-14 w-auto" />
+            </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Save good food from going to waste. Join our community of conscious consumers.
             </p>
