@@ -13,7 +13,7 @@ function App() {
     <div>
       <Header />
 
-      <main style={{padding: '1rem'}}>
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/marketplace" element={<Marketplace />} />

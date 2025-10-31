@@ -1,7 +1,7 @@
 import AvailableDeals from "../components/available-deals";
 import Hero from "../components/hero";
 import HowItWorks from "../components/how-it-works";
-import AboutUs from "./AboutUs";
+import CustomerReviews from "../components/customer-reviews";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <Hero />
       <HowItWorks />
       <AvailableDeals />
-      <AboutUs />
+      <CustomerReviews />
     </div>
   )
 }

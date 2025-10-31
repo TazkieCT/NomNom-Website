@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+body {
+  font-family: 'Momo Trust Display', sans-serif;
+}
