@@ -1,5 +1,5 @@
 import './App.css'
-import { Routes, Route, NavLink } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Marketplace from './pages/Marketplace'
 import AboutUs from './pages/AboutUs'
 import FAQ from './pages/FAQ'

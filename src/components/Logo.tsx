@@ -1,5 +1,4 @@
-import { motion, useAnimation } from 'framer-motion'
-import { useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 interface LogoProps {
   mode?: 'light' | 'dark'
@@ -7,7 +6,11 @@ interface LogoProps {
   enableRainbow?: boolean
 }
 
+// Prefix unused param with underscore to avoid TS unused variable errors while
+// keeping the public API stable in case other code depends on it.
 export default function Logo({ mode = 'dark', className = '', enableRainbow = false }: LogoProps) {
+  const _enableRainbow = enableRainbow
+  void _enableRainbow
   const textColor = mode === 'dark' ? '#1E1E1E' : '#FFFFFF'
   const accentColor = mode === 'dark' ? '#FFFFFF' : '#1E1E1E'
 
