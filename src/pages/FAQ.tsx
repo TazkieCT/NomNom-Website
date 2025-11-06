@@ -1,4 +1,3 @@
-import Hero from "../components/hero";
 import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
