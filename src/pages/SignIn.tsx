@@ -20,7 +20,7 @@ export default function SignIn() {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.45 }}
-        className="w-full max-w-md bg-gradient-to-br from-white via-red-50 to-white/95 rounded-2xl shadow-lg p-8"
+        className="w-full max-w-lg bg-white rounded-2xl shadow-xl p-8"
       >
         <div className="mb-6 text-center">
           <h1 className="text-2xl font-extrabold">Welcome back</h1>
