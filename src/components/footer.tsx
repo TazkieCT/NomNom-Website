@@ -15,12 +15,10 @@ export default function Footer() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Calculate parallax offset (slower scroll speed)
   const parallaxOffset = scrollY * 0.5
 
   return (
     <footer className="relative bg-gradient-to-b from-gray-900 to-black text-white overflow-hidden">
-      {/* Parallax Background Layer */}
       <div
         className="absolute inset-0 opacity-20"
         style={{
@@ -31,20 +29,17 @@ export default function Footer() {
         }}
       />
 
-      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
           <div>
             <div className="mb-4">
-              <Logo mode="light" className="h-14 w-auto" />
+              <Logo mode="light" className="h-14 w-auto cursor-pointer" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Save good food from going to waste. Join our community of conscious consumers.
             </p>
           </div>
 
-          {/* Company */}
           <div>
             <h4 className="font-bold mb-4">Company</h4>
             <ul className="space-y-2 text-gray-400 text-sm">

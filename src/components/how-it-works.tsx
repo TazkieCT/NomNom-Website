@@ -11,19 +11,19 @@ export default function HowItWorks() {
       icon: Search,
       title: "Browse Deals",
       description: "Explore surplus food from nearby restaurants at discounted prices",
-      image: "/delicious-food-with-pancakes-berries-and-pastries.jpg"
+      image: "/how_it_works1.jpeg"
     },
     {
       icon: CreditCard,
       title: "Reserve & Pay",
       description: "Select your meals and complete your purchase securely online",
-      image: "/delicious-food-with-pancakes-berries-and-pastries.jpg"
+      image: "/how_it_works2.jpeg"
     },
     {
       icon: ShoppingBag,
       title: "Pick Up",
       description: "Collect your delicious food during the specified pickup window",
-      image: "/delicious-food-with-pancakes-berries-and-pastries.jpg"
+      image: "/how_it_works3.jpeg"
     },
   ]
 
@@ -97,6 +97,19 @@ export default function HowItWorks() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="relative block w-full h-[120px] rotate-180"
+        >
+          <path
+            d="M0,0 Q600,120 1200,0 L1200,120 L0,120 Z"
+            className="fill-red-600"
+          ></path>
+        </svg>
       </div>
     </section>
   )

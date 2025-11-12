@@ -11,8 +11,21 @@ export default function AvailableDeals() {
   ]
 
   return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 md:py-28 bg-white relative">
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="relative block w-full h-[120px] rotate-180"
+        >
+          <path
+            d="M0,0 Q600,120 1200,0 L1200,120 L0,120 Z"
+            className="fill-red-600"
+          ></path>
+        </svg>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16 md:pt-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Available Right Now</h2>
           <p className="text-gray-600 text-lg">
