@@ -48,7 +48,16 @@ export default function AvailableDeals() {
         </div>
 
         <div className="text-center">
-          <button className="text-red-700 font-bold hover:text-red-900 transition">Explore More Deals →</button>
+          <button className="relative inline-flex items-center px-8 py-3 text-red-700 font-bold rounded-lg cursor-pointer hover:bg-red-50 transition-colors group">
+            {/* <span className="absolute inset-0 border-2 border-red-600 rounded-lg" style={{ clipPath: 'polygon(0 0, calc(100%) 0, calc(100%) 35%, calc(100% - 5px) 65%, calc(100%) 100%, 0 100%, 0 0)' }}></span> */}
+            <span className="absolute inset-0 border-2 border-red-600 rounded-lg"></span>
+            
+            <span className="relative z-10">Explore More Deals</span>
+            
+            {/* <span className="absolute -right-4 top-1/2 w-8 h-8 rounded-full flex items-center justify-center text-red-600 text-4xl transition-transform group-hover:translate-x-1 z-20 leading-none" style={{ transform: 'translateY(-50%)' }}>
+              →
+            </span> */}
+          </button>
         </div>
       </div>
     </section>
